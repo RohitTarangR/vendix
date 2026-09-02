@@ -21,12 +21,3 @@ This project is built using:
 1. `cd frontend`
 2. Run `npm install`
 3. Run `npm run dev` to start frontend dev server.
-
-## Phase 1 Implementation
-- Project Setup
-- PostgreSQL & Prisma Schema Setup
-- JWT Authentication & Authorization
-- Tenant Creation & Data Isolation structure
-- Core React Setup with Tailwind
-- Authentication Pages (Login/Register)
-- Dashboard Layout & Base Theme
