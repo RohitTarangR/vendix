@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-[#1D1D1F] bg-background antialiased selection:bg-primary selection:text-white;
+  }
+  
+  input, textarea, select {
+    @apply bg-white text-textPrimary dark:bg-black/50 dark:text-white dark:placeholder-gray-500;
+  }
+}
+
+@media print {
+
+  html,
+  body {
+    height: auto;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide all top-level wrappers and interactive elements */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Selectively show the print receipt area and its children */
+  #receipt-print-area,
+  #receipt-print-area * {
+    visibility: visible;
+  }
+
+  #receipt-print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    background: white !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-4px);
+  }
+
+  40% {
+    transform: translateX(4px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.3s cubic-bezier(.36, .07, .19, .97) both;
+}
